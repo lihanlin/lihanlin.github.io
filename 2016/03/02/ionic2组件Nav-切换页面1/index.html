@@ -11,19 +11,19 @@
     
 
     
-    <meta name="description" content="Ionic2是基于Angular2的跨平台app开发框架，目前还处于beta版本。此笔记是本人基于目前版本的学习总结（可能已与你现在的版本有差别），希望能借此给予以后接触ionic2的小伙伴一些帮助，未经本人同意不得转载，如果问题或错误请根据博客下方链接发邮件指出。
-Nav、NavController组件Nav组件最基本的App页面导航组件，它维护了一个页面栈，用NavController组件来具">
+    <meta name="description" content="Nav、NavController组件Nav组件最基本的App页面导航组件，选择器：ion-nav，它维护了一个页面栈，用NavController组件来具体控制如何在各个页面间切换。
+Nav根页面每一个Nav组件都有一个根页面，用[root]属性设置。它就是这个Nav最先显示的页面，在App组件里设置了Nav的根页面为StartPage：12345678910111213141516171819">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ionic2组件Nav-切换页面1">
 <meta property="og:url" content="http://lihanlin.github.io/2016/03/02/ionic2组件Nav-切换页面1/index.html">
 <meta property="og:site_name" content="Duizhang‘s Blog">
-<meta property="og:description" content="Ionic2是基于Angular2的跨平台app开发框架，目前还处于beta版本。此笔记是本人基于目前版本的学习总结（可能已与你现在的版本有差别），希望能借此给予以后接触ionic2的小伙伴一些帮助，未经本人同意不得转载，如果问题或错误请根据博客下方链接发邮件指出。
-Nav、NavController组件Nav组件最基本的App页面导航组件，它维护了一个页面栈，用NavController组件来具">
-<meta property="og:updated_time" content="2016-04-26T14:45:42.000Z">
+<meta property="og:description" content="Nav、NavController组件Nav组件最基本的App页面导航组件，选择器：ion-nav，它维护了一个页面栈，用NavController组件来具体控制如何在各个页面间切换。
+Nav根页面每一个Nav组件都有一个根页面，用[root]属性设置。它就是这个Nav最先显示的页面，在App组件里设置了Nav的根页面为StartPage：12345678910111213141516171819">
+<meta property="og:updated_time" content="2016-04-27T11:03:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ionic2组件Nav-切换页面1">
-<meta name="twitter:description" content="Ionic2是基于Angular2的跨平台app开发框架，目前还处于beta版本。此笔记是本人基于目前版本的学习总结（可能已与你现在的版本有差别），希望能借此给予以后接触ionic2的小伙伴一些帮助，未经本人同意不得转载，如果问题或错误请根据博客下方链接发邮件指出。
-Nav、NavController组件Nav组件最基本的App页面导航组件，它维护了一个页面栈，用NavController组件来具">
+<meta name="twitter:description" content="Nav、NavController组件Nav组件最基本的App页面导航组件，选择器：ion-nav，它维护了一个页面栈，用NavController组件来具体控制如何在各个页面间切换。
+Nav根页面每一个Nav组件都有一个根页面，用[root]属性设置。它就是这个Nav最先显示的页面，在App组件里设置了Nav的根页面为StartPage：12345678910111213141516171819">
 
     
     <link rel="alternative" href="/atom.xml" title="Duizhang‘s Blog" type="application/atom+xml">
@@ -94,8 +94,7 @@ Nav、NavController组件Nav组件最基本的App页面导航组件，它维护�
 </header>
 	<div class="article-content">
 		
-		<p>Ionic2是基于Angular2的跨平台app开发框架，目前还处于beta版本。此笔记是本人基于目前版本的学习总结（可能已与你现在的版本有差别），希望能借此给予以后接触ionic2的小伙伴一些帮助，未经本人同意不得转载，如果问题或错误请根据博客下方链接发邮件指出。</p>
-<h1 id="Nav、NavController组件"><a href="#Nav、NavController组件" class="headerlink" title="Nav、NavController组件"></a>Nav、NavController组件</h1><p>Nav组件最基本的App页面导航组件，它维护了一个页面栈，用NavController组件来具体控制如何在各个页面间切换。</p>
+		<h1 id="Nav、NavController组件"><a href="#Nav、NavController组件" class="headerlink" title="Nav、NavController组件"></a>Nav、NavController组件</h1><p>Nav组件最基本的App页面导航组件，选择器：ion-nav，它维护了一个页面栈，用NavController组件来具体控制如何在各个页面间切换。</p>
 <h2 id="Nav根页面"><a href="#Nav根页面" class="headerlink" title="Nav根页面"></a>Nav根页面</h2><p>每一个Nav组件都有一个根页面，用[root]属性设置。它就是这个Nav最先显示的页面，在App组件里设置了Nav的根页面为StartPage：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import &#123;StartPage&#125; from &apos;start&apos;</span><br><span class="line">@App(&#123;</span><br><span class="line">  template: &apos;&lt;ion-nav [root]=&quot;rootPage&quot;&gt;&lt;/ion-nav&gt;&apos;</span><br><span class="line">&#125;)</span><br><span class="line">class MyApp &#123;</span><br><span class="line">  constructor()&#123;</span><br><span class="line">    // First page to push onto the stack</span><br><span class="line">    this.rootPage = StartPage;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Page(&#123;</span><br><span class="line">template: `</span><br><span class="line">  &lt;ion-navbar *navbar&gt;</span><br><span class="line">    &lt;ion-title&gt;Login&lt;/ion-title&gt;</span><br><span class="line">  &lt;/ion-navbar&gt;</span><br><span class="line"></span><br><span class="line">  &lt;ion-content&gt;Hello World&lt;/ion-content&gt;`</span><br><span class="line">&#125;)</span><br><span class="line">export class StartPage &#123;</span><br><span class="line">  constructor(nav: NavController)&#123;</span><br><span class="line">    this.nav = nav;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="切换页面实例"><a href="#切换页面实例" class="headerlink" title="切换页面实例"></a>切换页面实例</h2><p>从startPage切换到OtherPage,<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">@Page(&#123;</span><br><span class="line">  template: `</span><br><span class="line">    &lt;ion-navbar *navbar&gt;</span><br><span class="line">      &lt;ion-title&gt;Login&lt;/ion-title&gt;</span><br><span class="line">    &lt;/ion-navbar&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ion-content&gt;</span><br><span class="line">      &lt;button (click)=&quot;goToOtherPage()&quot;&gt;</span><br><span class="line">        Go to OtherPage</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">    &lt;/ion-content&gt;`</span><br><span class="line">&#125;)</span><br><span class="line">export class StartPage &#123;</span><br><span class="line">  constructor(nav: NavController) &#123;</span><br><span class="line">    this.nav = nav;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  goToOtherPage()&#123;</span><br><span class="line">    //push another page onto the history stack</span><br><span class="line">    //causing the nav controller to animate the new page in</span><br><span class="line">    this.nav.push(OtherPage);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@Page(&#123;</span><br><span class="line">  template: `</span><br><span class="line">    &lt;ion-content&gt;</span><br><span class="line">      &lt;button (click)=&quot;goBack()&quot;&gt;</span><br><span class="line">        Go back</span><br><span class="line">      &lt;/button&gt;</span><br><span class="line">    &lt;/ion-content&gt;`</span><br><span class="line">&#125;)</span><br><span class="line">class OtherPage &#123;</span><br><span class="line">  constructor(nav: NavController) &#123;</span><br><span class="line">    this.nav = nav;</span><br><span class="line">  &#125;</span><br><span class="line">  goBack() &#123;</span><br><span class="line">    this.nav.pop();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这里用了nav.push(OtherPage)来切换到新的页面，nav.pop()退回到之前的页面。push(page, params, opts)在切换页面的同时还可以通过参数params给页面传递数据，opts参数设置切换页面的方式，传递数据的内容在接下来的一篇博客——页面间共享数据里详细介绍。</p>
@@ -111,6 +110,7 @@ Nav、NavController组件Nav组件最基本的App页面导航组件，它维护�
 <li>popTo(view, opts) 退回到指定页面</li>
 </ul>
 <p>这里只简单的介绍了一下部分方法的用途，具体参数细节、使用实例、以及更多方法请查看<a href="http://ionicframework.com/docs/v2/api/components/nav/NavController/" target="_blank" rel="external">API文档</a></p>
+<p>Ionic2是基于Angular2的跨平台app开发框架，目前还处于beta版本。此笔记是本人基于目前版本的学习总结（可能已与你现在的版本有差别），希望能借此给予以后接触ionic2的小伙伴一些帮助，未经本人同意不得转载，如果问题或错误请根据博客下方链接发邮件指出。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -146,11 +146,19 @@ Nav、NavController组件Nav组件最基本的App页面导航组件，它维护�
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/03/06/ionic2组件Tab-切换页面2/" title="ionic2组件Tab-切换页面2">
+  <strong>上一篇：</strong><br/>
+  <span>
+  ionic2组件Tab-切换页面2</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2016/02/23/ionic2环境搭建/"  title="ionic2环境搭建">
+<a href="/2016/02/23/Ionic2中文教程（一）预备知识/"  title="Ionic2中文教程（一）预备知识">
  <strong>下一篇：</strong><br/> 
- <span>ionic2环境搭建
+ <span>Ionic2中文教程（一）预备知识
 </span>
 </a>
 </div>
@@ -179,7 +187,7 @@ Nav、NavController组件Nav组件最基本的App页面导航组件，它维护�
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ionic2/" title="ionic2">ionic2<sup>3</sup></a></li>
+				<li><a href="/tags/ionic2/" title="ionic2">ionic2<sup>4</sup></a></li>
 			
 		
 			
