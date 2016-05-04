@@ -20,7 +20,7 @@
 <meta property="og:description" content="考虑到大家在开发过程中都希望随时查看自己的代码问题和整体的效果，所以在讲解如何开发app之前，我还想给大家介绍一下ionic项目是如何测试调试的。本文包含Ionic项目如何用浏览器调试，搭建ios环境和调试方法。android调试将在下一篇讲解。
 说明：Windows和linux是无法搭建ios环境的，只有mac能搭建ios环境，并且mac搭建android环境也很容易，所以推荐大家用mac开发。">
 <meta property="og:image" content="http://lihanlin.github.io/../../../../images/3-1.png">
-<meta property="og:updated_time" content="2016-05-04T03:47:33.000Z">
+<meta property="og:updated_time" content="2016-05-04T03:53:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ionic2中文教程（三）浏览器、ios调试">
 <meta name="twitter:description" content="考虑到大家在开发过程中都希望随时查看自己的代码问题和整体的效果，所以在讲解如何开发app之前，我还想给大家介绍一下ionic项目是如何测试调试的。本文包含Ionic项目如何用浏览器调试，搭建ios环境和调试方法。android调试将在下一篇讲解。
@@ -105,7 +105,7 @@
 <li>Safari：偏好设置 → 高级 → 在菜单栏中显示“开发”菜单； 开发 → 显示web检查器</li>
 </ul>
 <p>app在浏览器上运行效果跟在在真机上运行的效果大部分是相同的，但是不完全相同，尤其是当你使用cordova插件时，大部分插件浏览器是不支持的，无法显示效果，这时你需要在ios或者android设备上调试。</p>
-<h1 id="ios调试"><a href="#ios调试" class="headerlink" title="ios调试"></a>ios调试</h1><h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><p>在你的mac上安装Xcode，它是编译ios app的工具，在app store中下载安装即可</p>
+<h1 id="ios调试"><a href="#ios调试" class="headerlink" title="ios调试"></a>ios调试</h1><h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><p>在你的mac上安装Xcode，它是编译ios app必须的工具，在app store中下载安装即可</p>
 <h3 id="添加ios平台："><a href="#添加ios平台：" class="headerlink" title="添加ios平台："></a>添加ios平台：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ionic platform add ios</span><br></pre></td></tr></table></figure>
 <h3 id="安装ios编译部署依赖"><a href="#安装ios编译部署依赖" class="headerlink" title="安装ios编译部署依赖"></a>安装ios编译部署依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm -g install ios-sim ios-deploy</span><br></pre></td></tr></table></figure>
 <p>如果出现下面类似的错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">npm WARN lifecycle ios-deploy@1.8.6~preinstall: cannot run in wd %s %s (wd=%s) ios-</span><br><span class="line">deploy@1.8.6 ./src/scripts/check_reqs.js &amp;&amp; xcodebuild /usr/local/lib/node_modules/.staging/</span><br><span class="line">ios-deploy-298c9491</span><br><span class="line">npm ERR! Darwin 15.4.0</span><br><span class="line">npm ERR! argv &quot;/usr/local/bin/node&quot; &quot;/usr/local/bin/npm&quot; &quot;install&quot; &quot;-g&quot; &quot;ios-deploy&quot;</span><br><span class="line">npm ERR! node v5.10.1</span><br><span class="line">npm ERR! npm  v3.8.3</span><br><span class="line">npm ERR! path /usr/local/lib/node_modules/ios-deploy/build/Release/ios-deploy</span><br><span class="line">npm ERR! code ENOENT</span><br><span class="line">npm ERR! errno -2</span><br><span class="line">npm ERR! syscall chmod</span><br><span class="line"></span><br><span class="line">npm ERR! enoent ENOENT: no such file or directory, chmod &apos;/usr/local/lib/node_modules/ios-</span><br><span class="line">deploy/build/Release/ios-deploy&apos;</span><br><span class="line">npm ERR! enoent ENOENT: no such file or directory, chmod &apos;/usr/local/lib/node_modules/ios-</span><br><span class="line">deploy/build/Release/ios-deploy&apos;</span><br><span class="line">npm ERR! enoent This is most likely not a problem with npm itself</span><br><span class="line">npm ERR! enoent and is related to npm not being able to find a file.</span><br><span class="line">npm ERR! enoent </span><br><span class="line"></span><br><span class="line">npm ERR! Please include the following file with any support request:</span><br><span class="line">npm ERR!     /Users/lihanlin/npm-debug.log</span><br></pre></td></tr></table></figure></p>
@@ -212,6 +212,12 @@
           <li>
             
             	<a href="https://github.com/lihanlin/ionic2-Chinese-Course-Demo" target="_blank" title="Ionic2中文教程">Ionic2中文教程</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://ionicframework.com/docs/v2/getting-started/" target="_blank" title="Ionic2官方教程">Ionic2官方教程</a>
             
           </li>
         
