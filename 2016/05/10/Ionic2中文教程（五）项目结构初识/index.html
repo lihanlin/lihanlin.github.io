@@ -4,29 +4,31 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Ionic2中文教程（一）预备知识 | Duizhang‘s Blog</title>
+    <title>Ionic2中文教程（五）项目结构初识 | Duizhang‘s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Lihanlin">
     
 
     
-    <meta name="description" content="学习资料整理：ionic2是基于Angular2跨平台框架，在开发我们的app前最好熟悉或掌握一些基础知识！这里根据开发过程中用到的知识，总结一些比较好的学习资料来供大家学习：网上资料有很多，我每累挑了个人认为比较好的一两个推荐给大家，没有罗列很多以防有选恐的小伙伴不知学习哪个。HTML5+CSS：HTML5 中文教程
-javascript:JavaScript 教程
-ES6：ECMAScript">
+    <meta name="description" content="在之前的教程中，我们已经做好了准备工作，包括：预备知识、环境搭建和如何调试项目。接下来，让我们开始的app开发之旅吧！
+创建一个空项目项目名称你可随意起，添加ios、android平台，以便你随时进行调试123$ ionic start ionic2-demo blank --v2 --ts$ ionic platform add ios$ ionic platform add android
+运">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ionic2中文教程（一）预备知识">
-<meta property="og:url" content="http://lihanlin.github.io/2016/04/27/Ionic2中文教程（一）预备知识/index.html">
+<meta property="og:title" content="Ionic2中文教程（五）项目结构初识">
+<meta property="og:url" content="http://lihanlin.github.io/2016/05/10/Ionic2中文教程（五）项目结构初识/index.html">
 <meta property="og:site_name" content="Duizhang‘s Blog">
-<meta property="og:description" content="学习资料整理：ionic2是基于Angular2跨平台框架，在开发我们的app前最好熟悉或掌握一些基础知识！这里根据开发过程中用到的知识，总结一些比较好的学习资料来供大家学习：网上资料有很多，我每累挑了个人认为比较好的一两个推荐给大家，没有罗列很多以防有选恐的小伙伴不知学习哪个。HTML5+CSS：HTML5 中文教程
-javascript:JavaScript 教程
-ES6：ECMAScript">
-<meta property="og:updated_time" content="2016-07-16T09:47:48.000Z">
+<meta property="og:description" content="在之前的教程中，我们已经做好了准备工作，包括：预备知识、环境搭建和如何调试项目。接下来，让我们开始的app开发之旅吧！
+创建一个空项目项目名称你可随意起，添加ios、android平台，以便你随时进行调试123$ ionic start ionic2-demo blank --v2 --ts$ ionic platform add ios$ ionic platform add android
+运">
+<meta property="og:image" content="http://lihanlin.github.io/../../../../images/5-1.png">
+<meta property="og:updated_time" content="2016-06-23T14:40:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ionic2中文教程（一）预备知识">
-<meta name="twitter:description" content="学习资料整理：ionic2是基于Angular2跨平台框架，在开发我们的app前最好熟悉或掌握一些基础知识！这里根据开发过程中用到的知识，总结一些比较好的学习资料来供大家学习：网上资料有很多，我每累挑了个人认为比较好的一两个推荐给大家，没有罗列很多以防有选恐的小伙伴不知学习哪个。HTML5+CSS：HTML5 中文教程
-javascript:JavaScript 教程
-ES6：ECMAScript">
+<meta name="twitter:title" content="Ionic2中文教程（五）项目结构初识">
+<meta name="twitter:description" content="在之前的教程中，我们已经做好了准备工作，包括：预备知识、环境搭建和如何调试项目。接下来，让我们开始的app开发之旅吧！
+创建一个空项目项目名称你可随意起，添加ios、android平台，以便你随时进行调试123$ ionic start ionic2-demo blank --v2 --ts$ ionic platform add ios$ ionic platform add android
+运">
+<meta name="twitter:image" content="http://lihanlin.github.io/../../../../images/5-1.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Duizhang‘s Blog" type="application/atom+xml">
@@ -84,25 +86,41 @@ ES6：ECMAScript">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/27/Ionic2中文教程（一）预备知识/" title="Ionic2中文教程（一）预备知识" itemprop="url">Ionic2中文教程（一）预备知识</a>
+      <a href="/2016/05/10/Ionic2中文教程（五）项目结构初识/" title="Ionic2中文教程（五）项目结构初识" itemprop="url">Ionic2中文教程（五）项目结构初识</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Lihanlin" target="_blank" itemprop="author">Lihanlin</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-27T15:05:10.000Z" itemprop="datePublished"> 发表于 2016-04-27</time>
+    <time datetime="2016-05-10T03:07:11.000Z" itemprop="datePublished"> 发表于 2016-05-10</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		<h1 id="学习资料整理："><a href="#学习资料整理：" class="headerlink" title="学习资料整理："></a>学习资料整理：</h1><p>ionic2是基于Angular2跨平台框架，在开发我们的app前最好熟悉或掌握一些基础知识！<br>这里根据开发过程中用到的知识，总结一些比较好的学习资料来供大家学习：<br>网上资料有很多，我每累挑了个人认为比较好的一两个推荐给大家，没有罗列很多以防有选恐的小伙伴不知学习哪个。<br>HTML5+CSS：<br><a href="http://www.w3school.com.cn/html5/index.asp" target="_blank" rel="external">HTML5 中文教程</a></p>
-<p>javascript:<br><a href="http://www.w3school.com.cn/js/index.asp" target="_blank" rel="external">JavaScript 教程</a></p>
-<p>ES6：ECMAScript6是JavaScript新的规范，angular2需要用ES6或者TypeScript开发<br><a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">ECMAScript6 入门</a></p>
-<p>TypeScript：<br><a href="https://zhongsp.gitbooks.io/typescript-handbook/content/" target="_blank" rel="external">TypeScript中文版</a><br><a href="https://www.typescriptlang.org/docs/tutorial.html" target="_blank" rel="external">官方教程</a></p>
-<p>angular2：angular2目前的中文资料比较少，我推荐两个，最后在来一个比较全面的英文教程供大家参考。<br><a href="https://github.com/kittencup/angular2-ama-cn/issues/43" target="_blank" rel="external">angular2中文版</a><br><a href="http://www.hubwiz.com/course/567a414e660c92d638a68bf3/" target="_blank" rel="external">angular2(beta)入门 汇智网教程</a><br><a href="http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html" target="_blank" rel="external">angular2 syntax</a></p>
-<p>ionic2：<br><a href="http://ionicframework.com/docs/v2/getting-started/" target="_blank" rel="external">inoic2 官网教程</a></p>
+		<p>在之前的教程中，我们已经做好了准备工作，包括：预备知识、环境搭建和如何调试项目。接下来，让我们开始的app开发之旅吧！</p>
+<h1 id="创建一个空项目"><a href="#创建一个空项目" class="headerlink" title="创建一个空项目"></a>创建一个空项目</h1><p>项目名称你可随意起，添加ios、android平台，以便你随时进行调试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ionic start ionic2-demo blank --v2 --ts</span><br><span class="line">$ ionic platform add ios</span><br><span class="line">$ ionic platform add android</span><br></pre></td></tr></table></figure></p>
+<p>运行我们的项目尝尝鲜：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ionic serve</span><br></pre></td></tr></table></figure></p>
+<p>你的项目应该在浏览器中显示出来了！</p>
+<h1 id="项目结构简介"><a href="#项目结构简介" class="headerlink" title="项目结构简介"></a>项目结构简介</h1><p>打开你的项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ionic2-demo</span><br></pre></td></tr></table></figure></p>
+<p>目录结构如下图所示：<br><img src="../../../../images/5-1.png" alt="目录结构"><br>接下来我们先简单了解一下这些文件都是干什么的（按重要顺序排序）</p>
+<h2 id="app-文件夹"><a href="#app-文件夹" class="headerlink" title="app 文件夹"></a>app 文件夹</h2><p>这个文件夹包含：</p>
+<ul>
+<li>pages 文件夹</li>
+<li>theme 文件夹</li>
+<li>app.ts 文件<h3 id="pages-文件夹"><a href="#pages-文件夹" class="headerlink" title="pages 文件夹"></a>pages 文件夹</h3>包含你的app所有的页面组件，每个组件在这个目录下有一个单独的文件夹，如home文件夹。其中home.ts是定义这个组件的ts文件，home.html是home组件的模板，home.scss是组件的样式定义。</li>
+</ul>
+<h3 id="theme文件夹"><a href="#theme文件夹" class="headerlink" title="theme文件夹"></a>theme文件夹</h3><p>包含所有的app全局样式定义的.scss文件，注意全局样式定义是在整个app中使用的，而每个组件的样式还是在该组件的scss文件中定义。</p>
+<h3 id="app-ts"><a href="#app-ts" class="headerlink" title="app.ts"></a>app.ts</h3><p>这个文件定义了你的app的根组件。注意 TypeScript文件的后缀为.ts而不是.js，这里的问题是，我们的浏览器并不知道怎么读取ts文件，所以后面ionic会将ts文件编译成js文件。</p>
+<h2 id="www-文件夹"><a href="#www-文件夹" class="headerlink" title="www 文件夹"></a>www 文件夹</h2><p>ionic会将我们在app文件中的各个组件的源代码编译，编译后的文件就放在这个文件夹里。index.html 是你app的入口。所以，除了index.html，不要修改这个文件夹下的其他文件，因为你任何修改的文件，都会在下次编译时重新生成，你修改的内容也就没有了~<br>如果你需要用到图片，那么你的路径应该是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;www/images/test.jpg&quot;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>你的.scss文件会在www/build/scc文件夹里面。如果在.scss文件中用到图片相对路径，应该是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../../images/test/jpg</span><br></pre></td></tr></table></figure></p>
+<h2 id="resources-文件夹"><a href="#resources-文件夹" class="headerlink" title="resources 文件夹"></a>resources 文件夹</h2><p>这里放app启动界面（splash screens）和一些图标</p>
+<h2 id="config-xml"><a href="#config-xml" class="headerlink" title="config.xml"></a>config.xml</h2><p>这个文件定义cordova如何编译生成你的ios、android安装包，偶尔修改即可</p>
+<h2 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h2><p>定义了你各个依赖库及其版本，你只需要修改Ionic的版本来进行升级即可。</p>
+<h2 id="hooks-文件夹"><a href="#hooks-文件夹" class="headerlink" title="hooks 文件夹"></a>hooks 文件夹</h2><p>hooks 是构建程序时用到的，你可以在这里添加一些scripts文件。</p>
+<h2 id="node-modules、platform、plugins文件夹"><a href="#node-modules、platform、plugins文件夹" class="headerlink" title="node_modules、platform、plugins文件夹"></a>node_modules、platform、plugins文件夹</h2><p>这三个文件夹你不需要修改，知道用途即可：node_modules存放依赖库文件，platform存放各个平台相关文件，plugins存放各个插件相关文件。这些文件在你执行ionic命令时都会自动生成的。</p>
+<h2 id="其他文件"><a href="#其他文件" class="headerlink" title="其他文件"></a>其他文件</h2><p>其他的咱们也都不需要主动修改啦~</p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p><a href="https://github.com/lihanlin/ionic2-Chinese-Course-Demo" target="_blank" rel="external">ionic2中文教程</a>是我对ionic2的学习经验总结，分享出来希望能借此让以后接触ionic2的小伙伴迅速高效的学习使用这个框架。如果此文章对你有帮助，请按下方分享按钮将网站地址分享给更多的小伙伴，未经本人同意不得转载。如果你有问题需要我的帮助或发现错误请根据博客最下方邮件链接与本人联系。</p>
   
 	</div>
@@ -126,7 +144,7 @@ ES6：ECMAScript">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://lihanlin.github.io/2016/04/27/Ionic2中文教程（一）预备知识/" data-title="Ionic2中文教程（一）预备知识 | Duizhang‘s Blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://lihanlin.github.io/2016/05/10/Ionic2中文教程（五）项目结构初识/" data-title="Ionic2中文教程（五）项目结构初识 | Duizhang‘s Blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -140,18 +158,18 @@ ES6：ECMAScript">
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/04/29/Ionic2中文教程（二）环境搭建/" title="Ionic2中文教程（二）环境搭建">
+ <a href="/2016/05/10/Ionic2中文教程（六）ionic组件/" title="Ionic2中文教程（六）ionic组件">
   <strong>上一篇：</strong><br/>
   <span>
-  Ionic2中文教程（二）环境搭建</span>
+  Ionic2中文教程（六）ionic组件</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/11/15/Centos下用upstart管理自己的服务程序/"  title="Centos下用upstart管理自己的服务程序">
+<a href="/2016/05/07/Ionic2中文教程（四）android测试及mac搭建android环境/"  title="Ionic2中文教程（四）android测试及mac搭建android环境">
  <strong>下一篇：</strong><br/> 
- <span>Centos下用upstart管理自己的服务程序
+ <span>Ionic2中文教程（四）android测试及mac搭建android环境
 </span>
 </a>
 </div>
@@ -166,7 +184,7 @@ ES6：ECMAScript">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#学习资料整理："><span class="toc-number">1.</span> <span class="toc-text">学习资料整理：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#说明"><span class="toc-number">2.</span> <span class="toc-text">说明</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#创建一个空项目"><span class="toc-number">1.</span> <span class="toc-text">创建一个空项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#项目结构简介"><span class="toc-number">2.</span> <span class="toc-text">项目结构简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#app-文件夹"><span class="toc-number">2.1.</span> <span class="toc-text">app 文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#pages-文件夹"><span class="toc-number">2.1.1.</span> <span class="toc-text">pages 文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#theme文件夹"><span class="toc-number">2.1.2.</span> <span class="toc-text">theme文件夹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#app-ts"><span class="toc-number">2.1.3.</span> <span class="toc-text">app.ts</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#www-文件夹"><span class="toc-number">2.2.</span> <span class="toc-text">www 文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#resources-文件夹"><span class="toc-number">2.3.</span> <span class="toc-text">resources 文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#config-xml"><span class="toc-number">2.4.</span> <span class="toc-text">config.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#package-json"><span class="toc-number">2.5.</span> <span class="toc-text">package.json</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hooks-文件夹"><span class="toc-number">2.6.</span> <span class="toc-text">hooks 文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#node-modules、platform、plugins文件夹"><span class="toc-number">2.7.</span> <span class="toc-text">node_modules、platform、plugins文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他文件"><span class="toc-number">2.8.</span> <span class="toc-text">其他文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#说明"><span class="toc-number">3.</span> <span class="toc-text">说明</span></a></li></ol>
  
   </div>
 

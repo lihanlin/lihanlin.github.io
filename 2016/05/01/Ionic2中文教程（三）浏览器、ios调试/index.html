@@ -20,7 +20,7 @@
 <meta property="og:description" content="考虑到大家在开发过程中都希望随时查看自己的代码问题和整体的效果，所以在讲解如何开发app之前，我还想给大家介绍一下ionic项目是如何测试调试的。本文包含Ionic项目如何用浏览器调试，搭建ios环境和调试方法。android调试将在下一篇讲解。
 说明：Windows和linux是无法搭建ios环境的，只有mac能搭建ios环境，并且mac搭建android环境也很容易，所以推荐大家用mac开发。">
 <meta property="og:image" content="http://lihanlin.github.io/../../../../images/3-1.png">
-<meta property="og:updated_time" content="2016-05-04T04:04:38.000Z">
+<meta property="og:updated_time" content="2016-05-04T06:29:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ionic2中文教程（三）浏览器、ios调试">
 <meta name="twitter:description" content="考虑到大家在开发过程中都希望随时查看自己的代码问题和整体的效果，所以在讲解如何开发app之前，我还想给大家介绍一下ionic项目是如何测试调试的。本文包含Ionic项目如何用浏览器调试，搭建ios环境和调试方法。android调试将在下一篇讲解。
@@ -104,6 +104,8 @@
 <li>chrome浏览器：选项 → 更多工具 → 开发者工具</li>
 <li>Safari：偏好设置 → 高级 → 在菜单栏中显示“开发”菜单； 开发 → 显示web检查器</li>
 </ul>
+<p>当你的程序遇到问题并且不知道错误在哪里时，一种非常有效并且直观的调试方式是在程序中加入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(this.variable);</span><br></pre></td></tr></table></figure></p>
+<p>将相关的变量的值输出到控制台，当程序运行到这个语句时，会在浏览器调试的console控制台窗口中将变量的值打印出来，方便你查找错误。</p>
 <p>app在浏览器上运行效果跟在在真机上运行的效果大部分是相同的，但是不完全相同，尤其是当你使用cordova插件时，大部分插件浏览器是不支持的，无法显示效果，这时你需要在ios或者android设备上调试。</p>
 <h1 id="ios调试"><a href="#ios调试" class="headerlink" title="ios调试"></a>ios调试</h1><h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><p>在你的mac上安装Xcode，它是编译ios app必须的工具，在app store中下载安装即可</p>
 <h3 id="添加ios平台："><a href="#添加ios平台：" class="headerlink" title="添加ios平台："></a>添加ios平台：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ionic platform add ios</span><br></pre></td></tr></table></figure>
@@ -157,6 +159,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/05/07/Ionic2中文教程（四）android测试及mac搭建android环境/" title="Ionic2中文教程（四）android测试及mac搭建android环境">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Ionic2中文教程（四）android测试及mac搭建android环境</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2016/04/29/Ionic2中文教程（二）环境搭建/"  title="Ionic2中文教程（二）环境搭建">
@@ -190,7 +200,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ionic2/" title="ionic2">ionic2<sup>3</sup></a></li>
+				<li><a href="/tags/ionic2/" title="ionic2">ionic2<sup>6</sup></a></li>
 			
 		
 			
